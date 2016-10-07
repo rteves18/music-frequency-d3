@@ -10,11 +10,11 @@ $(document).ready(function () {
   audioSrc.connect(audioCtx.destination);
 
   //var frequencyData = new Uint8Array(analyser.frequencyBinCount);
-  var frequencyData = new Uint8Array(200);
+  var frequencyData = new Uint8Array(80);
 
   var svgHeight = '300';
-  var svgWidth = '1200';
-  var barPadding = '1';
+  var svgWidth = '1800';
+  var barPadding = '3';
 
   function createSvg(parent, height, width) {
     return d3.select(parent).append('svg').attr('height', height).attr('width', width);
@@ -49,7 +49,7 @@ $(document).ready(function () {
            return d;
         })
         .attr('fill', function(d) {
-           return 'rgb(0, 0, ' + d + ')';
+           return 'rgb(255, ' + d + ', 0)';
         });
   }
 
